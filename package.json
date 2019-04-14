@@ -1,0 +1,33 @@
+{
+  "name": "@hamgom95/xml2pojo",
+  "version": "0.1.0",
+  "description": "xml to pojo parser",
+  "main": "index.js",
+  "keywords": [
+    "xml",
+    "pojo",
+    "parser"
+  ],
+  "scripts": {
+    "test": "tape index.spec.js",
+    "build:doc": "jsdoc src/*",
+    "build:readme": "jsdoc2md --heading-depth=4 --template README.tpl.md \"src/!(*.spec.js|helpers.js)\" > README.md",
+    "prepublish": "npm run build:readme"
+  },
+  "author": {
+    "name": "Kevin Thomas",
+    "email": "hamgom95@gmail.com"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5",
+    "jsdoc-to-markdown": "^4.0.1",
+    "tape": "^4.10.1"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "xmldom": "^0.1.27"
+  }
+}
